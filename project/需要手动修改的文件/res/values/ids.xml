@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="z_p_banner_vp">false</item>
+    <item type="id" name="z_p_img_background">false</item>
+    <item type="id" name="z_p_img_bg">false</item>
+    <item type="id" name="z_p_img_bottom">false</item>
+    <item type="id" name="z_p_img_gb">false</item>
+    <item type="id" name="z_p_img_red_envelope">false</item>
+    <item type="id" name="z_p_ll_announcement">false</item>
+    <item type="id" name="z_p_pbProgress">false</item>
+    <item type="id" name="z_p_recyclerview">false</item>
+    <item type="id" name="z_p_relay_01">false</item>
+    <item type="id" name="z_p_relay_pro">false</item>
+    <item type="id" name="z_p_relay_top">false</item>
+    <item type="id" name="z_p_root">false</item>
+    <item type="id" name="z_p_tv_01">false</item>
+    <item type="id" name="z_p_tv_down">false</item>
+    <item type="id" name="z_p_tv_name">false</item>
+    <item type="id" name="z_p_tv_name2">false</item>
+    <item type="id" name="z_p_tv_pao">false</item>
+    <item type="id" name="z_p_tv_right">false</item>
+    <item type="id" name="z_p_tv_title">false</item>
+    <item type="id" name="z_p_v_line">false</item>
+</resources>

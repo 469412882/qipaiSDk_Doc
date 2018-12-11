@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/z_p_root" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/z_p_img_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <RelativeLayout android:id="@id/z_p_relay_top" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/z_p_tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_centerInParent="true" />
+        <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/z_p_tv_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="26.0dip" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/z_p_relay_top">
+        <com.jzb.qipaisdk.viewpager.LooperViewPager android:id="@id/z_p_banner_vp" android:layout_width="fill_parent" android:layout_height="190.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/z_p_ll_announcement" android:background="#ffffffff" android:padding="5.0px" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="80.0px">
+            <ImageView android:id="@id/z_p_img_gb" android:layout_width="45.0px" android:layout_height="45.0px" android:layout_marginRight="20.0px" android:scaleType="fitXY" />
+            <TextView android:textSize="40.0px" android:textColor="@color/z_p_yy_01" android:ellipsize="marquee" android:id="@id/z_p_tv_pao" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+        </LinearLayout>
+        <View android:id="@id/z_p_v_line" android:background="#ffdbdbdb" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <android.support.v7.widget.RecyclerView android:id="@id/z_p_recyclerview" android:paddingLeft="5.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView android:id="@id/z_p_img_red_envelope" android:layout_width="300.0px" android:layout_height="300.0px" android:layout_marginRight="20.0px" android:layout_marginBottom="30.0px" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

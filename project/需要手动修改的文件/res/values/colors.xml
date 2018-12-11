@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="z_p_main_color">#fffe7418</color>
+    <color name="z_p_orange">#fffa8c20</color>
+    <color name="z_p_transparent">#00000000</color>
+    <color name="z_p_white">#ffffffff</color>
+    <color name="z_p_yy_01">#ff444444</color>
+    <color name="z_p_yy_02">#ff000000</color>
+    <color name="z_p_yy_03">#ff808080</color>
+    <color name="z_p_yy_04">#ff000000</color>
+    <color name="z_p_yy_05">#ff3085ff</color>
+</resources>
