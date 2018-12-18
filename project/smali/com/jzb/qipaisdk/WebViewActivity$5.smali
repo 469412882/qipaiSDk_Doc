@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/jzb/qipaisdk/WebViewActivity;)V
     .locals 0
 
-    .line 307
+    .line 316
     iput-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity$5;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 4
 
-    .line 310
+    .line 319
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity$5;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     const-string v1, "\u4e0b\u8f7d\u9519\u8bef"
@@ -51,7 +51,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 311
+    .line 320
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity$5;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     new-instance v1, Landroid/content/Intent;

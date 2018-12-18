@@ -126,52 +126,52 @@
 .method private generateContentView()Landroid/view/View;
     .locals 4
 
-    .line 253
+    .line 254
     new-instance v0, Landroid/widget/LinearLayout;
 
     invoke-direct {v0, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 254
+    .line 255
     new-instance v1, Landroid/view/ViewGroup$LayoutParams;
 
     const/4 v2, -0x1
 
     invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 256
+    .line 257
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 257
+    .line 258
     new-instance v1, Landroid/widget/ImageView;
 
     invoke-direct {v1, p0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 258
+    .line 259
     new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v3, v2, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 260
+    .line 261
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 261
+    .line 262
     sget-object v2, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     const-string v2, "launchimg"
 
-    .line 262
+    .line 263
     invoke-static {p0, v2}, Lcom/jzb/qipaisdk/AppUtils;->getDrawableIdByName(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 264
+    .line 265
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 266
+    .line 267
     :cond_0
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
@@ -181,27 +181,27 @@
 .method private goMainActivity()V
     .locals 2
 
-    .line 101
+    .line 102
     sget-object v0, Lcom/jzb/qipaisdk/Constants;->mainClass:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
-    .line 102
+    .line 103
     new-instance v0, Landroid/content/Intent;
 
     sget-object v1, Lcom/jzb/qipaisdk/Constants;->mainClass:Ljava/lang/Class;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 103
+    .line 104
     invoke-virtual {p0, v0}, Lcom/jzb/qipaisdk/IntroActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 104
+    .line 105
     invoke-virtual {p0}, Lcom/jzb/qipaisdk/IntroActivity;->finish()V
 
     const/4 v0, 0x0
 
-    .line 105
+    .line 106
     invoke-virtual {p0, v0, v0}, Lcom/jzb/qipaisdk/IntroActivity;->overridePendingTransition(II)V
 
     :cond_0
@@ -211,7 +211,7 @@
 .method private goStart()V
     .locals 4
 
-    .line 241
+    .line 242
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -230,7 +230,7 @@
 .method private intentToWebViewActivity(Ljava/lang/String;)V
     .locals 2
 
-    .line 110
+    .line 111
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
@@ -239,33 +239,33 @@
 
     const-string v1, "android.intent.category.LAUNCHER"
 
-    .line 111
+    .line 112
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v1, 0x10000
 
-    .line 112
+    .line 113
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 113
+    .line 114
     const-class v1, Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     const-string v1, "url"
 
-    .line 114
+    .line 115
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 115
+    .line 116
     invoke-virtual {p0, v0}, Lcom/jzb/qipaisdk/IntroActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 116
+    .line 117
     invoke-virtual {p0}, Lcom/jzb/qipaisdk/IntroActivity;->finish()V
 
     const/4 p1, 0x0
 
-    .line 117
+    .line 118
     invoke-virtual {p0, p1, p1}, Lcom/jzb/qipaisdk/IntroActivity;->overridePendingTransition(II)V
 
     return-void
@@ -274,7 +274,7 @@
 .method private requestPhoneSdCardPermission()V
     .locals 3
 
-    .line 271
+    .line 272
     sget-object v0, Lcom/jzb/qipaisdk/IntroActivity;->PERMISSIONS_STORAGE:[Ljava/lang/String;
 
     invoke-static {p0, v0}, Lcom/jzb/qipaisdk/permission/PermissionsUtil;->hasPermission(Landroid/content/Context;[Ljava/lang/String;)Z
@@ -283,7 +283,7 @@
 
     if-nez v0, :cond_0
 
-    .line 272
+    .line 273
     invoke-virtual {p0}, Lcom/jzb/qipaisdk/IntroActivity;->getApplication()Landroid/app/Application;
 
     move-result-object v0
@@ -305,33 +305,33 @@
 .method public getPageSource(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
-    .line 155
+    .line 156
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 158
+    .line 159
     :try_start_0
     new-instance v2, Ljava/net/URL;
 
     invoke-direct {v2, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 159
+    .line 160
     invoke-virtual {v2}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object p1
 
-    .line 161
+    .line 162
     invoke-virtual {p1}, Ljava/net/URLConnection;->connect()V
 
-    .line 164
+    .line 165
     new-instance v2, Ljava/io/BufferedReader;
 
     new-instance v3, Ljava/io/InputStreamReader;
 
-    .line 165
+    .line 166
     invoke-virtual {p1}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object p1
@@ -345,7 +345,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 167
+    .line 168
     :goto_0
     :try_start_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -354,12 +354,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 168
+    .line 169
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 170
+    .line 171
     :cond_0
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_1
@@ -368,7 +368,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 176
+    .line 177
     :try_start_2
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -379,10 +379,10 @@
     :catch_0
     move-exception p1
 
-    .line 179
+    .line 180
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 183
+    .line 184
     :cond_1
     :goto_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -397,7 +397,7 @@
 
     if-nez p1, :cond_2
 
-    .line 184
+    .line 185
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -422,7 +422,7 @@
     :goto_2
     if-eqz v1, :cond_3
 
-    .line 176
+    .line 177
     :try_start_3
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -433,10 +433,10 @@
     :catch_1
     move-exception v0
 
-    .line 179
+    .line 180
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 181
+    .line 182
     :cond_3
     :goto_3
     throw p1
@@ -447,7 +447,7 @@
     :catch_3
     if-eqz v2, :cond_4
 
-    .line 176
+    .line 177
     :try_start_4
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_4
@@ -458,7 +458,7 @@
     :catch_4
     move-exception p1
 
-    .line 179
+    .line 180
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_4
@@ -469,33 +469,33 @@
 .method public getPageSource2(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 190
+    .line 191
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 193
+    .line 194
     :try_start_0
     new-instance v2, Ljava/net/URL;
 
     invoke-direct {v2, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 195
+    .line 196
     invoke-virtual {v2}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object p1
 
-    .line 197
+    .line 198
     invoke-virtual {p1}, Ljava/net/URLConnection;->connect()V
 
-    .line 200
+    .line 201
     new-instance v2, Ljava/io/BufferedReader;
 
     new-instance v3, Ljava/io/InputStreamReader;
 
-    .line 201
+    .line 202
     invoke-virtual {p1}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object p1
@@ -507,7 +507,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 203
+    .line 204
     :goto_0
     :try_start_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -516,7 +516,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 204
+    .line 205
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -527,7 +527,7 @@
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 213
+    .line 214
     :try_start_2
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -557,7 +557,7 @@
     :catch_1
     move-exception p1
 
-    .line 207
+    .line 208
     :goto_1
     :try_start_3
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
@@ -566,7 +566,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 213
+    .line 214
     :try_start_4
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_4
@@ -577,10 +577,10 @@
     :catch_2
     move-exception p1
 
-    .line 216
+    .line 217
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 220
+    .line 221
     :cond_1
     :goto_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -592,7 +592,7 @@
     :goto_3
     if-eqz v1, :cond_2
 
-    .line 213
+    .line 214
     :try_start_5
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_5
@@ -603,10 +603,10 @@
     :catch_3
     move-exception v0
 
-    .line 216
+    .line 217
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 218
+    .line 219
     :cond_2
     :goto_4
     throw p1
@@ -617,13 +617,6 @@
 
     const-string v0, ""
 
-    .line 225
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
     .line 226
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -632,6 +625,13 @@
     if-nez v1, :cond_0
 
     .line 227
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 228
     new-instance v0, Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
@@ -653,12 +653,12 @@
 .method public getUpdateInfo(Ljava/lang/String;)V
     .locals 1
 
-    .line 145
+    .line 146
     new-instance v0, Lcom/jzb/qipaisdk/IntroActivity$3;
 
     invoke-direct {v0, p0, p1}, Lcom/jzb/qipaisdk/IntroActivity$3;-><init>(Lcom/jzb/qipaisdk/IntroActivity;Ljava/lang/String;)V
 
-    .line 151
+    .line 152
     invoke-virtual {v0}, Lcom/jzb/qipaisdk/IntroActivity$3;->start()V
 
     return-void
@@ -667,14 +667,14 @@
 .method public mGetValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 94
+    .line 95
     iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity;->dataValue:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 95
+    .line 96
     iget-object v1, p0, Lcom/jzb/qipaisdk/IntroActivity;->dataValue:Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -697,7 +697,7 @@
 
     const-string v0, "\""
 
-    .line 96
+    .line 97
     invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
@@ -726,15 +726,15 @@
         .end annotation
     .end param
 
-    .line 122
+    .line 123
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     const/4 p1, 0x1
 
-    .line 123
+    .line 124
     invoke-virtual {p0, p1}, Lcom/jzb/qipaisdk/IntroActivity;->requestWindowFeature(I)Z
 
-    .line 125
+    .line 126
     invoke-virtual {p0}, Lcom/jzb/qipaisdk/IntroActivity;->getWindow()Landroid/view/Window;
 
     move-result-object p1
@@ -743,14 +743,14 @@
 
     invoke-virtual {p1, v0, v0}, Landroid/view/Window;->setFlags(II)V
 
-    .line 127
+    .line 128
     invoke-direct {p0}, Lcom/jzb/qipaisdk/IntroActivity;->generateContentView()Landroid/view/View;
 
     move-result-object p1
 
     invoke-virtual {p0, p1}, Lcom/jzb/qipaisdk/IntroActivity;->setContentView(Landroid/view/View;)V
 
-    .line 128
+    .line 129
     invoke-virtual {p0}, Lcom/jzb/qipaisdk/IntroActivity;->requestData()V
 
     return-void
@@ -759,13 +759,13 @@
 .method protected onResume()V
     .locals 0
 
-    .line 235
+    .line 236
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 236
+    .line 237
     invoke-direct {p0}, Lcom/jzb/qipaisdk/IntroActivity;->goStart()V
 
-    .line 237
+    .line 238
     invoke-direct {p0}, Lcom/jzb/qipaisdk/IntroActivity;->requestPhoneSdCardPermission()V
 
     return-void
@@ -774,12 +774,12 @@
 .method public requestData()V
     .locals 1
 
-    .line 133
+    .line 134
     new-instance v0, Lcom/jzb/qipaisdk/IntroActivity$2;
 
     invoke-direct {v0, p0}, Lcom/jzb/qipaisdk/IntroActivity$2;-><init>(Lcom/jzb/qipaisdk/IntroActivity;)V
 
-    .line 141
+    .line 142
     invoke-virtual {v0}, Lcom/jzb/qipaisdk/IntroActivity$2;->start()V
 
     return-void

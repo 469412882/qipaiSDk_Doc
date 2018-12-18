@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/jzb/qipaisdk/WebViewActivity;)V
     .locals 0
 
-    .line 125
+    .line 134
     iput-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity$1;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
@@ -37,14 +37,14 @@
 
     const-string p1, "blank"
 
-    .line 143
+    .line 152
     invoke-virtual {p2, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 144
+    .line 153
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity$1;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-virtual {p1}, Lcom/jzb/qipaisdk/WebViewActivity;->showErrorPage()V
@@ -58,7 +58,7 @@
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 136
+    .line 145
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity$1;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-static {p1}, Lcom/jzb/qipaisdk/WebViewActivity;->access$000(Lcom/jzb/qipaisdk/WebViewActivity;)Ljava/lang/String;
@@ -81,7 +81,7 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
+    .line 146
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity$1;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-virtual {p1}, Lcom/jzb/qipaisdk/WebViewActivity;->showErrorPage()V
@@ -92,7 +92,7 @@
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 0
 
-    .line 128
+    .line 137
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
 
     move-result p1

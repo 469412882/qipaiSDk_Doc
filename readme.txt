@@ -10,7 +10,7 @@ apk接入sdk步骤：
 	                     
 2、修改R.X.XXX文件 (已修改)
        R.color.smali  9处修改
-       R.drawable.smali  7处修改
+       R.drawable.smali  8处修改
        R.id.smali  21处修改
        R.layout.smali  3处修改
        R.style.smali  1处修改
@@ -22,7 +22,7 @@ apk接入sdk步骤：
 	 需要手动修改的文件：res/values
    按目录复制资源文件
    		 color   9处
-   		 drawable  8处
+   		 drawable  9处
    		 id  21处
    		 layout  3处
    		 style  1处
@@ -32,6 +32,8 @@ apk接入sdk步骤：
 	 launchimage.png  ： 在com/xxx/xxx/R$drawable.smali文件中定义资源常量
 	                     
 	 MyDialogStyle   ： 在com/xxx/xxx/R$style.smali文件中定义资源常量
+	 
+	 xml   ： 在com/xxx/xxx/R$xml.smali文件中定义资源常量
 	 
 	 修改宿主res/values下的文件（按照目录修改）
 	 注意：宿主的资源类型ID和本SDK的资源类型ID可能不同

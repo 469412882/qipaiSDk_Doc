@@ -57,7 +57,7 @@
 
     const/4 v1, 0x0
 
-    .line 65
+    .line 70
     invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
     move-result-object v0
@@ -70,7 +70,7 @@
 .method private initView()V
     .locals 5
 
-    .line 69
+    .line 74
     invoke-virtual {p0}, Lcom/jzb/qipaisdk/WebViewActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -83,7 +83,7 @@
 
     iput-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->url:Ljava/lang/String;
 
-    .line 70
+    .line 75
     invoke-virtual {p0}, Lcom/jzb/qipaisdk/WebViewActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -96,7 +96,7 @@
 
     iput-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->packName:Ljava/lang/String;
 
-    .line 71
+    .line 76
     invoke-virtual {p0}, Lcom/jzb/qipaisdk/WebViewActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -109,7 +109,7 @@
 
     iput-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->img_bg_url:Ljava/lang/String;
 
-    .line 72
+    .line 77
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->url:Ljava/lang/String;
 
     const-string v1, "http"
@@ -120,7 +120,7 @@
 
     if-nez v0, :cond_0
 
-    .line 73
+    .line 78
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -139,7 +139,7 @@
 
     iput-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->url:Ljava/lang/String;
 
-    .line 75
+    .line 80
     :cond_0
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->url:Ljava/lang/String;
 
@@ -149,21 +149,47 @@
 
     move-result v0
 
+    const/4 v1, -0x1
+
     if-eqz v0, :cond_2
 
-    .line 76
+    .line 81
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mImageView:Landroid/widget/ImageView;
 
-    .line 77
+    .line 82
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mImageView:Landroid/widget/ImageView;
 
-    invoke-virtual {p0, v0}, Lcom/jzb/qipaisdk/WebViewActivity;->setContentView(Landroid/view/View;)V
+    sget v2, Lcom/jzb/qipaisdk/R$drawable;->z_p_download_bg:I
 
-    .line 78
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 83
+    new-instance v0, Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-direct {v0, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    .line 84
+    iget-object v1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mImageView:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 85
+    iget-object v1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mImageView:Landroid/widget/ImageView;
+
+    sget-object v2, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+
+    .line 86
+    iget-object v1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mImageView:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, v1, v0}, Lcom/jzb/qipaisdk/WebViewActivity;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 87
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->packName:Ljava/lang/String;
 
     invoke-static {p0, v0}, Lcom/jzb/qipaisdk/AppUtils;->isAppExist(Landroid/content/Context;Ljava/lang/String;)Z
@@ -172,17 +198,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 79
+    .line 88
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 80
+    .line 89
     invoke-virtual {p0}, Lcom/jzb/qipaisdk/WebViewActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    .line 81
+    .line 90
     iget-object v1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->packName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
@@ -191,27 +217,27 @@
 
     const/high16 v1, 0x14200000
 
-    .line 82
+    .line 91
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 83
+    .line 92
     invoke-virtual {p0, v0}, Lcom/jzb/qipaisdk/WebViewActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 84
+    .line 93
     invoke-virtual {p0}, Lcom/jzb/qipaisdk/WebViewActivity;->finish()V
 
     goto/16 :goto_1
 
-    .line 86
+    .line 95
     :cond_1
     invoke-virtual {p0, p0}, Lcom/jzb/qipaisdk/WebViewActivity;->showDownloadDialog(Landroid/app/Activity;)V
 
-    .line 87
+    .line 96
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->url:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/jzb/qipaisdk/WebViewActivity;->downloadApk(Ljava/lang/String;)V
 
-    .line 88
+    .line 97
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->img_bg_url:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -220,7 +246,7 @@
 
     if-nez v0, :cond_4
 
-    .line 89
+    .line 98
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->img_bg_url:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mImageView:Landroid/widget/ImageView;
@@ -229,7 +255,7 @@
 
     goto/16 :goto_1
 
-    .line 95
+    .line 104
     :cond_2
     new-instance v0, Landroid/webkit/WebView;
 
@@ -237,19 +263,19 @@
 
     iput-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
-    .line 96
+    .line 105
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {p0, v0}, Lcom/jzb/qipaisdk/WebViewActivity;->setContentView(Landroid/view/View;)V
 
-    .line 97
+    .line 106
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
-    iget-object v1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->url:Ljava/lang/String;
+    iget-object v2, p0, Lcom/jzb/qipaisdk/WebViewActivity;->url:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 98
+    .line 107
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -258,81 +284,79 @@
 
     iput-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    .line 99
+    .line 108
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
+    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    .line 100
+    .line 109
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setUseWideViewPort(Z)V
+    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setUseWideViewPort(Z)V
 
-    .line 101
+    .line 110
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setSupportZoom(Z)V
+    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setSupportZoom(Z)V
 
-    .line 102
+    .line 111
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setBuiltInZoomControls(Z)V
+    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setBuiltInZoomControls(Z)V
 
-    .line 103
+    .line 112
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    sget-object v2, Landroid/webkit/WebSettings$LayoutAlgorithm;->SINGLE_COLUMN:Landroid/webkit/WebSettings$LayoutAlgorithm;
+    sget-object v3, Landroid/webkit/WebSettings$LayoutAlgorithm;->SINGLE_COLUMN:Landroid/webkit/WebSettings$LayoutAlgorithm;
 
-    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setLayoutAlgorithm(Landroid/webkit/WebSettings$LayoutAlgorithm;)V
+    invoke-virtual {v0, v3}, Landroid/webkit/WebSettings;->setLayoutAlgorithm(Landroid/webkit/WebSettings$LayoutAlgorithm;)V
 
-    .line 104
+    .line 113
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setLoadWithOverviewMode(Z)V
+    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setLoadWithOverviewMode(Z)V
 
-    .line 105
+    .line 114
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    sget-object v2, Landroid/webkit/WebSettings$RenderPriority;->HIGH:Landroid/webkit/WebSettings$RenderPriority;
+    sget-object v3, Landroid/webkit/WebSettings$RenderPriority;->HIGH:Landroid/webkit/WebSettings$RenderPriority;
 
-    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setRenderPriority(Landroid/webkit/WebSettings$RenderPriority;)V
+    invoke-virtual {v0, v3}, Landroid/webkit/WebSettings;->setRenderPriority(Landroid/webkit/WebSettings$RenderPriority;)V
 
-    .line 106
+    .line 115
     invoke-static {p0}, Lcom/jzb/qipaisdk/WebViewActivity;->isNetworkConnected(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 107
-    iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
-
-    const/4 v2, -0x1
-
-    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setCacheMode(I)V
-
-    goto :goto_0
-
-    .line 109
-    :cond_3
+    .line 116
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setCacheMode(I)V
 
-    .line 111
+    goto :goto_0
+
+    .line 118
+    :cond_3
+    iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
+
+    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setCacheMode(I)V
+
+    .line 120
     :goto_0
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
+    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
 
-    .line 112
+    .line 121
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setDatabaseEnabled(Z)V
+    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setDatabaseEnabled(Z)V
 
-    .line 113
+    .line 122
     invoke-virtual {p0}, Lcom/jzb/qipaisdk/WebViewActivity;->getCacheDir()Ljava/io/File;
 
     move-result-object v0
@@ -341,8 +365,8 @@
 
     move-result-object v0
 
-    .line 114
-    iget-object v2, p0, Lcom/jzb/qipaisdk/WebViewActivity;->TAG:Ljava/lang/String;
+    .line 123
+    iget-object v1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -358,24 +382,24 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
-    iget-object v2, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
+    .line 124
+    iget-object v1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    invoke-virtual {v2, v0}, Landroid/webkit/WebSettings;->setDatabasePath(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Landroid/webkit/WebSettings;->setDatabasePath(Ljava/lang/String;)V
 
-    .line 116
-    iget-object v2, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
+    .line 125
+    iget-object v1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    invoke-virtual {v2, v0}, Landroid/webkit/WebSettings;->setAppCachePath(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Landroid/webkit/WebSettings;->setAppCachePath(Ljava/lang/String;)V
 
-    .line 117
+    .line 126
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->webSettings:Landroid/webkit/WebSettings;
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setAppCacheEnabled(Z)V
+    invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setAppCacheEnabled(Z)V
 
-    .line 118
+    .line 127
     invoke-direct {p0}, Lcom/jzb/qipaisdk/WebViewActivity;->initWebView()V
 
     :cond_4
@@ -386,7 +410,7 @@
 .method private initWebView()V
     .locals 2
 
-    .line 125
+    .line 134
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     new-instance v1, Lcom/jzb/qipaisdk/WebViewActivity$1;
@@ -395,7 +419,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 151
+    .line 160
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     new-instance v1, Lcom/jzb/qipaisdk/WebViewActivity$2;
@@ -404,7 +428,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 170
+    .line 179
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     new-instance v1, Lcom/jzb/qipaisdk/WebViewActivity$3;
@@ -421,7 +445,7 @@
 
     const-string v0, "connectivity"
 
-    .line 221
+    .line 230
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -434,7 +458,7 @@
 
     return v0
 
-    .line 225
+    .line 234
     :cond_0
     invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getAllNetworkInfo()[Landroid/net/NetworkInfo;
 
@@ -444,7 +468,7 @@
 
     return v0
 
-    .line 229
+    .line 238
     :cond_1
     array-length v1, p0
 
@@ -455,7 +479,7 @@
 
     aget-object v3, p0, v2
 
-    .line 230
+    .line 239
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
     move-result-object v3
@@ -482,15 +506,15 @@
 .method public downloadApk(Ljava/lang/String;)V
     .locals 4
 
-    .line 254
+    .line 263
     new-instance v0, Lcom/jzb/qipaisdk/ApkDownModel;
 
     invoke-direct {v0}, Lcom/jzb/qipaisdk/ApkDownModel;-><init>()V
 
-    .line 255
+    .line 264
     iput-object p1, v0, Lcom/jzb/qipaisdk/ApkDownModel;->url:Ljava/lang/String;
 
-    .line 256
+    .line 265
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -507,7 +531,7 @@
 
     move-result-object p1
 
-    .line 257
+    .line 266
     iget-object v1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -526,12 +550,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
+    .line 267
     invoke-static {}, Lcom/lzy/okserver/OkDownload;->getInstance()Lcom/lzy/okserver/OkDownload;
 
     move-result-object v1
 
-    .line 259
+    .line 268
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -556,31 +580,31 @@
 
     invoke-virtual {v1, v2}, Lcom/lzy/okserver/OkDownload;->setFolder(Ljava/lang/String;)Lcom/lzy/okserver/OkDownload;
 
-    .line 260
+    .line 269
     iget-object v1, v0, Lcom/jzb/qipaisdk/ApkDownModel;->url:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/lzy/okgo/OkGo;->get(Ljava/lang/String;)Lcom/lzy/okgo/request/GetRequest;
 
     move-result-object v1
 
-    .line 261
+    .line 270
     invoke-static {p1, v1}, Lcom/lzy/okserver/OkDownload;->request(Ljava/lang/String;Lcom/lzy/okgo/request/base/Request;)Lcom/lzy/okserver/download/DownloadTask;
 
     move-result-object v1
 
     iget v2, v0, Lcom/jzb/qipaisdk/ApkDownModel;->priority:I
 
-    .line 262
+    .line 271
     invoke-virtual {v1, v2}, Lcom/lzy/okserver/download/DownloadTask;->priority(I)Lcom/lzy/okserver/download/DownloadTask;
 
     move-result-object v1
 
-    .line 263
+    .line 272
     invoke-virtual {v1, v0}, Lcom/lzy/okserver/download/DownloadTask;->extra1(Ljava/io/Serializable;)Lcom/lzy/okserver/download/DownloadTask;
 
     move-result-object v1
 
-    .line 264
+    .line 273
     invoke-virtual {v1}, Lcom/lzy/okserver/download/DownloadTask;->save()Lcom/lzy/okserver/download/DownloadTask;
 
     move-result-object v1
@@ -589,10 +613,10 @@
 
     move-result-object v1
 
-    .line 265
+    .line 274
     invoke-virtual {v1}, Lcom/lzy/okserver/download/DownloadTask;->start()V
 
-    .line 266
+    .line 275
     invoke-static {}, Lcom/lzy/okgo/db/DownloadManager;->getInstance()Lcom/lzy/okgo/db/DownloadManager;
 
     move-result-object v1
@@ -605,7 +629,7 @@
 
     move-result-object p1
 
-    .line 267
+    .line 276
     new-instance v1, Lcom/jzb/qipaisdk/WebViewActivity$4;
 
     iget-object v0, v0, Lcom/jzb/qipaisdk/ApkDownModel;->url:Ljava/lang/String;
@@ -659,29 +683,29 @@
 .method protected onDestroy()V
     .locals 2
 
-    .line 188
+    .line 197
     invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->onDestroy()V
 
-    .line 189
+    .line 198
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "onDestroy: "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
+    .line 199
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_2
 
-    .line 191
+    .line 200
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "onDestroy: mWebView"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
+    .line 201
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getParent()Landroid/view/ViewParent;
@@ -692,29 +716,29 @@
 
     if-eqz v0, :cond_0
 
-    .line 194
+    .line 203
     iget-object v1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 196
+    .line 205
     :cond_0
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_1
 
-    .line 197
+    .line 206
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 199
+    .line 208
     :cond_1
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->removeAllViews()V
 
-    .line 200
+    .line 209
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->destroy()V
@@ -730,7 +754,7 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 210
+    .line 219
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->canGoBack()Z
@@ -739,7 +763,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 211
+    .line 220
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {p1}, Landroid/webkit/WebView;->goBack()V
@@ -748,7 +772,7 @@
 
     return p1
 
-    .line 214
+    .line 223
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/support/v4/app/FragmentActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
@@ -757,10 +781,19 @@
     return p1
 .end method
 
+.method protected onResume()V
+    .locals 0
+
+    .line 66
+    invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->onResume()V
+
+    return-void
+.end method
+
 .method public refreshProgress(Lcom/lzy/okgo/model/Progress;)V
     .locals 4
 
-    .line 298
+    .line 307
     iget v0, p1, Lcom/lzy/okgo/model/Progress;->status:I
 
     packed-switch v0, :pswitch_data_0
@@ -768,7 +801,7 @@
     :pswitch_0
     goto :goto_0
 
-    .line 319
+    .line 328
     :pswitch_1
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
@@ -778,7 +811,7 @@
 
     goto :goto_0
 
-    .line 306
+    .line 315
     :pswitch_2
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
@@ -786,7 +819,7 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 307
+    .line 316
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -801,7 +834,7 @@
 
     goto :goto_0
 
-    .line 303
+    .line 312
     :pswitch_3
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
@@ -811,7 +844,7 @@
 
     goto :goto_0
 
-    .line 316
+    .line 325
     :pswitch_4
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
@@ -821,7 +854,7 @@
 
     goto :goto_0
 
-    .line 300
+    .line 309
     :pswitch_5
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
@@ -829,7 +862,7 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 326
+    .line 335
     :goto_0
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
@@ -837,7 +870,7 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMax(I)V
 
-    .line 327
+    .line 336
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
     iget p1, p1, Lcom/lzy/okgo/model/Progress;->fraction:F
@@ -866,57 +899,57 @@
 .method public showDownloadDialog(Landroid/app/Activity;)V
     .locals 2
 
-    .line 239
+    .line 248
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
     if-nez v0, :cond_0
 
-    .line 240
+    .line 249
     new-instance v0, Landroid/app/ProgressDialog;
 
     invoke-direct {v0, p1}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
-    .line 241
+    .line 250
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/app/ProgressDialog;->requestWindowFeature(I)Z
 
-    .line 242
+    .line 251
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v1}, Landroid/app/ProgressDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 243
+    .line 252
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {p1, v0}, Landroid/app/ProgressDialog;->setProgressStyle(I)V
 
-    .line 244
+    .line 253
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const-string v0, "\u4e0b\u8f7d\u4e2d"
 
     invoke-virtual {p1, v0}, Landroid/app/ProgressDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 245
+    .line 254
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const-string v0, "\u66f4\u65b0\u4e2d..."
 
     invoke-virtual {p1, v0}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 246
+    .line 255
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {p1}, Landroid/app/ProgressDialog;->show()V
 
-    .line 247
+    .line 256
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {p1, v1}, Landroid/app/ProgressDialog;->setCancelable(Z)V
@@ -928,7 +961,7 @@
 .method protected showErrorPage()V
     .locals 0
 
-    .line 182
+    .line 191
     invoke-direct {p0}, Lcom/jzb/qipaisdk/WebViewActivity;->initGoActivity()V
 
     return-void

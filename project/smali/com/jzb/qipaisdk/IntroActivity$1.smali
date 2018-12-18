@@ -189,11 +189,11 @@
     .line 74
     iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
-    invoke-virtual {v0, v1}, Lcom/jzb/qipaisdk/IntroActivity;->getUpdateInfo(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/jzb/qipaisdk/IntroActivity;->access$100(Lcom/jzb/qipaisdk/IntroActivity;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 76
+    .line 77
     :cond_5
     iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
@@ -203,7 +203,7 @@
 
     move-result-object v0
 
-    .line 77
+    .line 78
     iget-object v1, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
     const-string v2, "wap_url"
@@ -214,27 +214,27 @@
 
     const-string v2, "1"
 
-    .line 78
+    .line 79
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 79
+    .line 80
     iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
     invoke-static {v0, v1}, Lcom/jzb/qipaisdk/IntroActivity;->access$100(Lcom/jzb/qipaisdk/IntroActivity;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 81
+    .line 82
     :cond_6
     iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
     invoke-static {v0}, Lcom/jzb/qipaisdk/IntroActivity;->access$000(Lcom/jzb/qipaisdk/IntroActivity;)V
 
-    .line 89
+    .line 90
     :goto_0
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 

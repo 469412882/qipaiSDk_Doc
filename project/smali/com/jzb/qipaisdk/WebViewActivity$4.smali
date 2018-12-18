@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/jzb/qipaisdk/WebViewActivity;Ljava/lang/Object;)V
     .locals 0
 
-    .line 267
+    .line 276
     iput-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity$4;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-direct {p0, p2}, Lcom/lzy/okserver/download/DownloadListener;-><init>(Ljava/lang/Object;)V
@@ -41,12 +41,12 @@
 .method public onFinish(Ljava/io/File;Lcom/lzy/okgo/model/Progress;)V
     .locals 0
 
-    .line 285
+    .line 294
     iget-object p2, p0, Lcom/jzb/qipaisdk/WebViewActivity$4;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-static {p2, p1}, Lcom/jzb/qipaisdk/AppUtils;->installApk(Landroid/app/Activity;Ljava/io/File;)V
 
-    .line 286
+    .line 295
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity$4;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-virtual {p1}, Lcom/jzb/qipaisdk/WebViewActivity;->finish()V
@@ -57,7 +57,7 @@
 .method public bridge synthetic onFinish(Ljava/lang/Object;Lcom/lzy/okgo/model/Progress;)V
     .locals 0
 
-    .line 267
+    .line 276
     check-cast p1, Ljava/io/File;
 
     invoke-virtual {p0, p1, p2}, Lcom/jzb/qipaisdk/WebViewActivity$4;->onFinish(Ljava/io/File;Lcom/lzy/okgo/model/Progress;)V
@@ -68,7 +68,7 @@
 .method public onProgress(Lcom/lzy/okgo/model/Progress;)V
     .locals 1
 
-    .line 275
+    .line 284
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity$4;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-virtual {v0, p1}, Lcom/jzb/qipaisdk/WebViewActivity;->refreshProgress(Lcom/lzy/okgo/model/Progress;)V

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/jzb/qipaisdk/WebViewActivity;)V
     .locals 0
 
-    .line 170
+    .line 179
     iput-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity$3;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onDownloadStart(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
     .locals 0
 
-    .line 173
+    .line 182
     iget-object p2, p0, Lcom/jzb/qipaisdk/WebViewActivity$3;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-static {p2}, Lcom/jzb/qipaisdk/WebViewActivity;->access$000(Lcom/jzb/qipaisdk/WebViewActivity;)Ljava/lang/String;
@@ -49,14 +49,14 @@
 
     invoke-static {p2, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
+    .line 183
     iget-object p2, p0, Lcom/jzb/qipaisdk/WebViewActivity$3;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     iget-object p3, p0, Lcom/jzb/qipaisdk/WebViewActivity$3;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-virtual {p2, p3}, Lcom/jzb/qipaisdk/WebViewActivity;->showDownloadDialog(Landroid/app/Activity;)V
 
-    .line 175
+    .line 184
     iget-object p2, p0, Lcom/jzb/qipaisdk/WebViewActivity$3;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-virtual {p2, p1}, Lcom/jzb/qipaisdk/WebViewActivity;->downloadApk(Ljava/lang/String;)V

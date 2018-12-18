@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/jzb/qipaisdk/WebViewActivity;)V
     .locals 0
 
-    .line 151
+    .line 160
     iput-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity$2;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
@@ -35,14 +35,14 @@
 .method public onHideCustomView()V
     .locals 2
 
-    .line 157
+    .line 166
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity$2;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     iget-object v0, v0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_0
 
-    .line 158
+    .line 167
     iget-object v0, p0, Lcom/jzb/qipaisdk/WebViewActivity$2;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     iget-object v0, v0, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
@@ -53,7 +53,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 159
+    .line 168
     iget-object v1, p0, Lcom/jzb/qipaisdk/WebViewActivity$2;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     iget-object v1, v1, Lcom/jzb/qipaisdk/WebViewActivity;->mWebView:Landroid/webkit/WebView;
@@ -67,10 +67,10 @@
 .method public onReceivedTitle(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
 
-    .line 165
+    .line 174
     invoke-super {p0, p1, p2}, Landroid/webkit/WebChromeClient;->onReceivedTitle(Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    .line 166
+    .line 175
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity$2;->this$0:Lcom/jzb/qipaisdk/WebViewActivity;
 
     invoke-static {p1}, Lcom/jzb/qipaisdk/WebViewActivity;->access$000(Lcom/jzb/qipaisdk/WebViewActivity;)Ljava/lang/String;

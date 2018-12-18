@@ -241,6 +241,8 @@
 
 .field public static final z_p_yuan_white:I = 0x7f079077
 
+.field public static final z_p_download_bg:I = 0x7f079078
+
 
 # direct methods
 .method public constructor <init>()V

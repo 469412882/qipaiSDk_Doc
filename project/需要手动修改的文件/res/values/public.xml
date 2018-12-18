@@ -17,6 +17,7 @@
     <public type="drawable" name="z_p_progressbar_horizontal2" id="0x7f079075" />
     <public type="drawable" name="z_p_yuan_orner" id="0x7f079076" />
     <public type="drawable" name="z_p_yuan_white" id="0x7f079077" />
+    <public type="drawable" name="z_p_download_bg" id="0x7f079078" />
     <public type="id" name="z_p_banner_vp" id="0x7f08f0ae" />
     <public type="id" name="z_p_img_background" id="0x7f08f0af" />
     <public type="id" name="z_p_img_bg" id="0x7f08f0b0" />
