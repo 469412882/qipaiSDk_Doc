@@ -19,7 +19,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 8
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,17 +28,20 @@
 .method public static init(Landroid/app/Application;Ljava/lang/String;Ljava/lang/Class;)V
     .locals 1
 
-    .line 12
+    .line 14
     invoke-static {}, Lcom/lzy/okgo/OkGo;->getInstance()Lcom/lzy/okgo/OkGo;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/lzy/okgo/OkGo;->init(Landroid/app/Application;)Lcom/lzy/okgo/OkGo;
 
-    .line 13
+    .line 15
+    invoke-static {p0}, Lcn/jpush/android/api/JPushInterface;->init(Landroid/content/Context;)V
+
+    .line 16
     sput-object p1, Lcom/jzb/qipaisdk/Constants;->APP_ID:Ljava/lang/String;
 
-    .line 14
+    .line 17
     sput-object p2, Lcom/jzb/qipaisdk/Constants;->mainClass:Ljava/lang/Class;
 
     return-void

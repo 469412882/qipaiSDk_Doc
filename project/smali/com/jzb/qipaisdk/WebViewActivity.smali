@@ -930,20 +930,6 @@
 
     invoke-virtual {p1, v0}, Landroid/app/ProgressDialog;->setProgressStyle(I)V
 
-    .line 253
-    iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
-
-    const-string v0, "\u4e0b\u8f7d\u4e2d"
-
-    invoke-virtual {p1, v0}, Landroid/app/ProgressDialog;->setTitle(Ljava/lang/CharSequence;)V
-
-    .line 254
-    iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
-
-    const-string v0, "\u66f4\u65b0\u4e2d..."
-
-    invoke-virtual {p1, v0}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
-
     .line 255
     iget-object p1, p0, Lcom/jzb/qipaisdk/WebViewActivity;->mProgressDialog:Landroid/app/ProgressDialog;
 

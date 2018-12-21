@@ -82,7 +82,7 @@
 
     invoke-virtual {v0}, Lcom/jzb/qipaisdk/IntroActivity;->finish()V
 
-    goto/16 :goto_0
+    goto :goto_0
 
     .line 57
     :cond_1
@@ -134,22 +134,22 @@
     goto :goto_0
 
     :cond_3
-    const-string v1, "code"
+    const-string v1, "rt_code"
 
     .line 67
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Ljava/lang/String;
+    check-cast v1, Ljava/lang/String;
 
-    const-string v1, "201"
+    const-string v2, "201"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_4
+    if-eqz v1, :cond_4
 
     .line 68
     iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
@@ -158,83 +158,61 @@
 
     goto :goto_0
 
-    .line 71
     :cond_4
-    iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
-
-    const-string v1, "is_update"
-
-    invoke-virtual {v0, v1}, Lcom/jzb/qipaisdk/IntroActivity;->mGetValue(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 72
-    iget-object v1, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
-
-    const-string v2, "update_url"
-
-    invoke-virtual {v1, v2}, Lcom/jzb/qipaisdk/IntroActivity;->mGetValue(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "1"
+    const-string v1, "data"
 
     .line 73
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    .line 74
-    iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
-
-    invoke-static {v0, v1}, Lcom/jzb/qipaisdk/IntroActivity;->access$100(Lcom/jzb/qipaisdk/IntroActivity;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 77
-    :cond_5
-    iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
-
-    const-string v1, "is_wap"
-
-    invoke-virtual {v0, v1}, Lcom/jzb/qipaisdk/IntroActivity;->mGetValue(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 78
-    iget-object v1, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
+    check-cast v0, Ljava/lang/String;
 
-    const-string v2, "wap_url"
+    invoke-static {v0}, Lcom/jzb/qipaisdk/AppUtils;->parseKeyAndValueToMap(Ljava/lang/String;)Ljava/util/Map;
 
-    invoke-virtual {v1, v2}, Lcom/jzb/qipaisdk/IntroActivity;->mGetValue(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
+
+    const-string v1, "show_url"
+
+    .line 74
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
+    check-cast v1, Ljava/lang/String;
+
+    const-string v2, "url"
+
+    .line 75
+    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
     const-string v2, "1"
 
-    .line 79
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 76
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_6
+    if-eqz v1, :cond_5
 
-    .line 80
-    iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
+    .line 77
+    iget-object v1, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
-    invoke-static {v0, v1}, Lcom/jzb/qipaisdk/IntroActivity;->access$100(Lcom/jzb/qipaisdk/IntroActivity;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/jzb/qipaisdk/IntroActivity;->access$100(Lcom/jzb/qipaisdk/IntroActivity;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 82
-    :cond_6
+    .line 85
+    :cond_5
     iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$1;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
     invoke-static {v0}, Lcom/jzb/qipaisdk/IntroActivity;->access$000(Lcom/jzb/qipaisdk/IntroActivity;)V
 
-    .line 90
+    .line 93
     :goto_0
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 

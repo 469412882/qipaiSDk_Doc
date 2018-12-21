@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/jzb/qipaisdk/IntroActivity;Ljava/lang/String;)V
     .locals 0
 
-    .line 146
+    .line 149
     iput-object p1, p0, Lcom/jzb/qipaisdk/IntroActivity$3;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
     iput-object p2, p0, Lcom/jzb/qipaisdk/IntroActivity$3;->val$url:Ljava/lang/String;
@@ -39,7 +39,7 @@
 .method public run()V
     .locals 3
 
-    .line 148
+    .line 151
     iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$3;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
     iget-object v1, p0, Lcom/jzb/qipaisdk/IntroActivity$3;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
@@ -52,7 +52,7 @@
 
     iput-object v1, v0, Lcom/jzb/qipaisdk/IntroActivity;->updateDataValue:Ljava/lang/String;
 
-    .line 149
+    .line 152
     iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$3;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
     iget-object v0, v0, Lcom/jzb/qipaisdk/IntroActivity;->mHandler:Landroid/os/Handler;
