@@ -61,5 +61,8 @@ apk接入sdk步骤：
    
 10、修改logo
    修改Manifest中指定的res/mipmap/logo.png 注意：如果有多个适配文件，都要修改
+   
+   
+   android:visibility="gone"
 
    
