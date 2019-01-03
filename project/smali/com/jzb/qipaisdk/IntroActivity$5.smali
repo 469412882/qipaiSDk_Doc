@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/jzb/qipaisdk/IntroActivity;)V
     .locals 0
 
-    .line 279
+    .line 275
     iput-object p1, p0, Lcom/jzb/qipaisdk/IntroActivity$5;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

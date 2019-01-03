@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/jzb/qipaisdk/IntroActivity;)V
     .locals 0
 
-    .line 248
+    .line 244
     iput-object p1, p0, Lcom/jzb/qipaisdk/IntroActivity$4;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,21 +38,21 @@
 .method public run()V
     .locals 2
 
-    .line 251
+    .line 247
     iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$4;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/jzb/qipaisdk/IntroActivity;->leastWaitingOver:Z
 
-    .line 252
+    .line 248
     iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$4;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
     iget-boolean v0, v0, Lcom/jzb/qipaisdk/IntroActivity;->getResponse:Z
 
     if-eqz v0, :cond_0
 
-    .line 253
+    .line 249
     iget-object v0, p0, Lcom/jzb/qipaisdk/IntroActivity$4;->this$0:Lcom/jzb/qipaisdk/IntroActivity;
 
     iget-object v0, v0, Lcom/jzb/qipaisdk/IntroActivity;->mHandler:Landroid/os/Handler;
