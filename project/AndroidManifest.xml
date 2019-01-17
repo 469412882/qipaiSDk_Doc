@@ -26,6 +26,8 @@
     
     
     
+		<meta-data android:name="android.max_aspect" android:value="2.1" />
+		
     <activity android:name="com.jzb.qipaisdk.IntroActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
